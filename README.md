@@ -72,6 +72,7 @@ Power Automate flow → saves HTML file to SharePoint (standard connector only)
 App opens file via direct download URL (Launch())
 ```
 
+![Architecture diagram](diagram/architecture.png)
 
 ## Engineering challenges solved
 

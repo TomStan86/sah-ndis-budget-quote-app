@@ -1,4 +1,4 @@
-# SaH Budget & Quote Generator — Power Apps Solution
+# SaH Budget & Quote Generator - Power Apps Solution
 
 A custom Power Apps application that calculates available client budget funds and generates professional, branded quotes — replacing an inconsistent, manual quoting process with a standardised, self-service tool for non-technical staff. Built entirely on free-tier Microsoft 365 licensing, with no premium connectors.
 
@@ -72,7 +72,6 @@ Power Automate flow → saves HTML file to SharePoint (standard connector only)
 App opens file via direct download URL (Launch())
 ```
 
-*(See `/diagram` for a visual version of this flow.)*
 
 ## Engineering challenges solved
 
@@ -108,8 +107,6 @@ End-to-end ownership: requirements gathering, data model design, app build, the 
 
 ## Screenshots
 
-*(Add screenshots to `/screenshots` and reference them here, e.g.)*
-
-`![Client & Budget Setup screen](screenshots/01-budget-setup.png)`
-`![Service Line Builder](screenshots/02-service-builder.png)`
-`![Generated quote output](screenshots/03-quote-output.png)`
+![Client & Budget Setup screen](screenshots/01-budget-setup.png)
+![Service Line Builder](screenshots/02-service-builder.png)
+![Generated quote output](screenshots/03-quote-output.png)

@@ -18,17 +18,17 @@ I designed and built an end-to-end Power Apps application that lets non-technica
 
 A three-screen Power Apps canvas app:
 
-- **Client & Budget Setup** — captures client details, quote period, support/funding tier, and funding adjustments (carried-over unspent funds, supplementary amounts, co-contribution percentages). Shows a live "Total Available Budget" before any services are added.
-- **Service Line Builder** — the core data-entry screen. A dropdown-driven entry row feeds an in-memory collection rendered as a scrollable, editable list. A running summary bar shows total quoted, remaining budget, and a visual over-budget warning.
-- **Quote Summary & Generation** — a read-only recap of client details, budget summary, and all service lines, with a one-click "Generate Quote" action and a "New Quote" reset.
+- **Client & Budget Setup** - captures client details, quote period, support/funding tier, and funding adjustments (carried-over unspent funds, supplementary amounts, co-contribution percentages). Shows a live "Total Available Budget" before any services are added.
+- **Service Line Builder** - the core data-entry screen. A dropdown-driven entry row feeds an in-memory collection rendered as a scrollable, editable list. A running summary bar shows total quoted, remaining budget, and a visual over-budget warning.
+- **Quote Summary & Generation** - a read-only recap of client details, budget summary, and all service lines, with a one-click "Generate Quote" action and a "New Quote" reset.
 
 ### Data model
 
 Three SharePoint lists act as lightweight reference tables — deliberately using soft, in-memory matching rather than SharePoint lookup columns, to avoid known Power Apps/SharePoint relationship quirks:
 
-- **Services/Rates** — billable service line items, with rate, category, a fixed-price flag, and a day-type classification (e.g. weekday/weekend/public holiday) used to filter which services are selectable for a given day.
-- **Support Levels** — funding tiers, each with a daily funding rate and an administrative fee percentage.
-- **Public Holidays** — a maintained date list used purely for date arithmetic (see below).
+- **Services/Rates** - billable service line items, with rate, category, a fixed-price flag, and a day-type classification (e.g. weekday/weekend/public holiday) used to filter which services are selectable for a given day.
+- **Support Levels** - funding tiers, each with a daily funding rate and an administrative fee percentage.
+- **Public Holidays** - a maintained date list used purely for date arithmetic (see below).
 
 ### Core logic
 
@@ -38,7 +38,7 @@ Three SharePoint lists act as lightweight reference tables — deliberately usin
 
 **Day-based filtering:** the service dropdown filters its options based on the selected day, using the day-type classification on the rate table — preventing staff from accidentally selecting a weekend-rate service for a weekday visit, with an "any day" option for one-off entries.
 
-### Quote generation — the interesting engineering problem
+### Quote generation - the interesting engineering problem
 
 This went through several iterations before landing on a solution that worked entirely within free-tier licensing:
 
